@@ -4,7 +4,9 @@ Welcome to the **Text-to-Speech Converter** – a sleek and intuitive web applic
 
 ## **Screenshots 📸**:
 
-![Text-to-Speech Converter Screenshot](images/text_to_speech_screenshot.png)
+![Text-to-Speech Converter Screenshot](textToSpeech1.jpeg)
+
+![Text-to-Speech Converter Screenshot](textToSpeech2.jpeg)
 
 ## **Features** ✨
 
