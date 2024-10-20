@@ -24,6 +24,15 @@
     to { opacity: 1; }
 }
 
+
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
 .total h1 {
     font-size: 45px;
     font-weight: bold;
@@ -31,12 +40,21 @@
     margin-bottom: 50px;
     opacity: 0;
     animation: slideIn 1s ease forwards;
+    text-align: center;
 }
 
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 
 .total h1 span {
     color: #ff2963;
@@ -47,6 +65,7 @@ textarea {
     height: 250px;
     background: #6460a6;
     color: white;
+
     font-size: 1.2rem;
     border: 0;
     outline: 0;
@@ -64,16 +83,51 @@ textarea:hover, textarea:focus {
 
 textarea::placeholder {
     font-size: 1.2rem;
+
+    font-size: 1.2rem;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+textarea:hover, textarea:focus {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+textarea::placeholder {
+    font-size: 1.2rem;
+
     color: white;
 }
 
 .row {
     width: 600px;
     display: flex;
+
+    flex-direction: column; /* Make this column direction */
+    align-items: center; /* Align items in the center */
+
     align-items: center;
+
     gap: 20px;
     animation: fadeIn 1.5s ease;
 }
+
+
+/* Center the text in the heading */
+.row h1 {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 
 button {
     background: #ff2963;
@@ -96,6 +150,10 @@ button:hover {
 
 select {
     flex: 1;
+
+    width: 100%; /* Make the select take the full width */
+
+
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -133,4 +191,34 @@ select:hover {
 
 select {
     animation: dropdownSlide 0.5s ease;
+
+    height: 50px; /* Ensure the select box height is consistent */
+    line-height: 50px; /* Align the text vertically */
+    padding: 0 20px; /* Padding for inner spacing */
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: center; /* Align dropdown arrow in the center */
+}
+
+/* Ensure the select and button align properly */
+.row {
+    display: flex;
+    flex-direction: column; /* Keep the column structure */
+    align-items: center;
+}
+
+.row h1, .row select, .row button {
+    width: 100%; /* Make each child of row fill the full width */
+    text-align: center; /* Center align the text */
+    margin-bottom: 15px;
+}
+
+/* Add some padding to ensure spacing is correct */
+.row h1 {
+    padding-bottom: 10px;
+}
+.row button {
+    height: 50px; /* Match the height of the button and select */
+
+
 }
